@@ -27,6 +27,7 @@ let postReflection = (event) => {
         let entryTemplate = `Date: ${ent.date}\nEntry: ${ent.post}\nConfidence Level: ${ent.confidence}\nDescribe Confidence: ${ent.description}`;
         console.log(entryTemplate);
     });
+    // !! looks like you're saving the data fine but you should be RENDERING this data on the page
     event.preventDefault();
 }
 
