@@ -32,6 +32,7 @@ let postReflection = (event) => {
         
         
     });
+    // !! looks like you're saving the data fine but you should be RENDERING this data on the page
     event.preventDefault();
 }
 
