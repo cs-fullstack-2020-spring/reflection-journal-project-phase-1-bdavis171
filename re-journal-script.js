@@ -28,7 +28,8 @@ let postReflection = (event) => {
     journalEntries.forEach(ent =>  {
        
          entryTemplate = `${entryTemplate} Date: ${ent.date}\nEntry: ${ent.post}\nConfidence Level: ${ent.confidence}\nDescribe Confidence: ${ent.description}\n\n`;
-        entry_logs.innerText = `${entryTemplate}`;
+        //POST: render on page.
+         entry_logs.innerText = `${entryTemplate}`;
         
         
     });
