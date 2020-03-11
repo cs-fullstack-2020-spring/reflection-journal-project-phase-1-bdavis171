@@ -7,6 +7,7 @@ const entry = document.querySelector('#entry');
 const confidenceLevel = document.querySelector('#confidence');
 const confidenceDescription = document.querySelector('#confidence-description');
 const postBtn = document.querySelector('#post-reflection');
+const entry_logs = document.querySelector('#entry-logs');
 
 //create an array to store each journal entry
 const journalEntries = [];
@@ -23,9 +24,13 @@ let postReflection = (event) => {
     //push the object into the journalEntries array
     journalEntries.push(journalEntry);
     //print each entry in the array
+    let entryTemplate = '';
     journalEntries.forEach(ent =>  {
-        let entryTemplate = `Date: ${ent.date}\nEntry: ${ent.post}\nConfidence Level: ${ent.confidence}\nDescribe Confidence: ${ent.description}`;
-        console.log(entryTemplate);
+       
+         entryTemplate = `${entryTemplate} Date: ${ent.date}\nEntry: ${ent.post}\nConfidence Level: ${ent.confidence}\nDescribe Confidence: ${ent.description}\n\n`;
+        entry_logs.innerText = `${entryTemplate}`;
+        
+        
     });
     event.preventDefault();
 }
